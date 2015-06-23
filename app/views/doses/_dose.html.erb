@@ -1,0 +1,6 @@
+<li id="review-<%= dose.id %>" class="text-left">
+  <span><%= @dose.description %></span>
+  <span><% @ingredient = Ingredient.find(dose.ingredient_id) %></span>
+  <span><%= @ingredient.name %></span>
+  <span><%= link_to("Remove ingredient", cocktail_dose_path(@cocktail, dose), method: :delete) %></span>
+</li>
